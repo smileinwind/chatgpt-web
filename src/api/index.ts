@@ -45,7 +45,7 @@ export function fetchChatAPIProcess<T = any>(
   }
 
   return post<T>({
-    url: '/chat-process',
+    url: 'https://chatapi.iyunnan.org.cn/api/chat-process',
     data,
     signal: params.signal,
     onDownloadProgress: params.onDownloadProgress,
@@ -54,13 +54,13 @@ export function fetchChatAPIProcess<T = any>(
 
 export function fetchSession<T>() {
   return post<T>({
-    url: '/session',
+    url: 'https://chatapi.iyunnan.org.cn/api/session',
   })
 }
 
 export function fetchVerify<T>(token: string) {
   return post<T>({
-    url: '/verify',
+    url: 'https://chatapi.iyunnan.org.cn/api/verify',
     data: { token },
   })
 }

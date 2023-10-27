@@ -38,9 +38,9 @@ export default defineConfig((env) => {
       proxy: {
         '/api': {
           target: viteEnv.VITE_APP_API_BASE_URL,
-          logLevel: 'debug', // 设置日志级别为 debug
+          // logLevel: 'debug', // 设置日志级别为 debug
           changeOrigin: true, // 允许跨域
-          // rewrite: path => path.replace('/api/', '/'),
+          rewrite: path => path.replace('/api/', '/'),
         },
       },
     },
