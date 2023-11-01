@@ -45,7 +45,7 @@ export function fetchChatAPIProcess<T = any>(
   }
 
   return post<T>({
-    url: '/api/chat-process',
+    url: '/chat-process',
     data,
     signal: params.signal,
     onDownloadProgress: params.onDownloadProgress,
@@ -54,13 +54,13 @@ export function fetchChatAPIProcess<T = any>(
 
 export function fetchSession<T>() {
   return post<T>({
-    url: '/api/api/session',
+    url: '/session',
   })
 }
 
 export function fetchVerify<T>(token: string) {
   return post<T>({
-    url: '/api/verify',
+    url: '/verify',
     data: { token },
   })
 }
